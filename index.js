@@ -51,9 +51,9 @@ function lakukanLooping(arrPegawai) {
         "Jumlah Pria dan Wanita berimbang"
   */
   let komentar = "";
-
+  let index = 0;
   dataYangAkanDilooping.forEach(pegawai => {
-    let index = 0;
+
     hasilLooping[index] = pegawai.namaDepan + " " + pegawai.namaBelakang;
     if (pegawai.jenisKelamin == 'M'){
       jumlahPria = jumlahPria + 1;
@@ -61,7 +61,7 @@ function lakukanLooping(arrPegawai) {
     else if(pegawai.jenisKelamin == 'F'){
       jumlahWanita = jumlahWanita + 1;
     }
-    index ++;
+    index = index + 1;
   });
 
   if(jumlahPria > jumlahWanita ){
