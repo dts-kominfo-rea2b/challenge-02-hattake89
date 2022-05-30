@@ -53,13 +53,15 @@ function lakukanLooping(arrPegawai) {
   let komentar = "";
 
   dataYangAkanDilooping.forEach(pegawai => {
-    hasilLooping[pegawai.id] = pegawai.namaDepan + " " + pegawai.namaBelakang;
+    let index = 0;
+    hasilLooping[index] = pegawai.namaDepan + " " + pegawai.namaBelakang;
     if (pegawai.jenisKelamin == 'M'){
       jumlahPria = jumlahPria + 1;
     }
     else if(pegawai.jenisKelamin == 'F'){
       jumlahWanita = jumlahWanita + 1;
     }
+    index ++;
   });
 
   if(jumlahPria > jumlahWanita ){
